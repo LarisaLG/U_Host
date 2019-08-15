@@ -1,12 +1,21 @@
-
 #product-overview {
-    background: url("freedom.jpg");
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
+    url("images/freedom.jpg") left 10% bottom 20% /cover no-repeat border-box,
+    #ff1b68; /*multiple backgrounds and stacking*/
+    
+    /* background-position: left 10% bottom 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box;
+    border: 5px red dashed; */
+    /* background-image: linear-gradient(red, blue); */
+    /* background-image: radial-gradient(circle, red, blue, green); */
     width: 100%;
-    height: 528px;
-    padding: 10px;
+    height: 728px;
+    padding: 1.5rem;
     /* border: 5px solid #b4410e; */
-    /* margin: 10px;  */
-    margin-top: 43px;
+    margin-top: 2.75rem;
     position: relative;
 }
 
@@ -14,20 +23,19 @@
     color: #179438;
     text-align: center;
     font-weight: bold;
-    /* text-shadow: 2px 2px 2px #000; */
 }
 
 #product-overview h1 {
     color: white;
     font-family: 'Anton', sans-serif;
     position: absolute;
-    left: 9%x;
+    left: 3%;
     /* top: 400px; */
     /*instead add position relative to parent*/
     bottom: 12%;
     padding: 10px;
 }
-}
+
 .plan__list{
     width: 80%;
     margin: auto;
@@ -36,8 +44,8 @@
 .plan{
     background: #55f37f;
     text-align: center;
-    padding: 16px;
-    margin: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
     display: inline-block;
     width: 30%;
     vertical-align: middle;
@@ -51,7 +59,7 @@
 .plan__annotation{
     background: #fff;
     color: #19b84c;
-    padding: 8px;
+    padding: 0.5rem;
     box-shadow: 4px 4px 4px 2px rgb(0, 0, 0, 0.5);
     border-radius: 8px;
 }
@@ -76,17 +84,17 @@
 }
 
 .plan__feature{
-    margin: 8px 0;
+    margin: 0.5rem 0;
 }
 
 #key-features{
     background: #ff1b68;
-    margin-top: 80px;
+    margin-top: 5rem;
 }
 #key-features .section-title{
     color: #ffffff;
-    margin: 32px;
-    padding: 16px;
+    margin: 2rem;
+    padding: 1rem;
 }
 .key-feature__list{
     list-style: none;
@@ -106,12 +114,13 @@
     border: 2px solid #424242;
     border-radius: 50%;
     margin: auto;
+    padding: 1.5rem;
 }
 .key-feature__descript{
     text-align: center;
     font-weight: bold;
     color: #ffffff;
-    font-style: 20px;
+    font-style: 1.2rem;
 }
 /* h1 {
     font-family: sans-serif;
