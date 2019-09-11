@@ -49,6 +49,8 @@ main{
     color: #0e4f1f;
     font-size: 1.2rem;
     background: white;
+    font-size: 900;
+    font-style: italic;
 }
 .clearfix{
     clear: both;
@@ -87,7 +89,7 @@ main{
         margin-right: auto;
     }
 }
-
+/*actually should be 1500px, but don't work*/
 @media (min-width: 1200px){
     .package {
         border-left: 4px solid #0e4f1f;
