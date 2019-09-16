@@ -21,7 +21,7 @@ main {
     display: none;
     top: 50;
     left: 0;
-    z-index: 100;
+    z-index: 6;
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.5);
@@ -34,12 +34,10 @@ main {
     left: 0;
     background: #2ddf5c;
     padding: 0.5rem 1rem;
-    z-index: 1;
-}
-
-.main-header > div {
-    display: inline-block;
-    vertical-align: middle;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .toggle-button {
@@ -69,16 +67,13 @@ main {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    /* font-size: 1.5rem; */
-    height: 2.5rem;
     /* width: 20px; */
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .main-header__brand img {
-    height: 100%; 
+    height: 2.5rem;
     /* width: 100%; */
+    vertical-align: middle;
 }
 
 .main-nav {
@@ -89,10 +84,10 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
 }
 
 .main-nav__item {
-    display: inline-block;
     margin: 0 1rem;
 }
 
@@ -137,12 +132,13 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-footer__link {
-    display: block;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .main-footer__link a {
@@ -153,25 +149,6 @@ main {
 .main-footer__link a:hover,
 .main-footer__link a:active {
     color: #ccc;
-}
-
-@media (min-width: 40rem) {
-/*hide button on desktop view*/
-    .toggle-button {
-        display: none;
-    }
-    /*show main menu on desktop and move menu to the rigth side */
-    .main-nav {
-        display: inline-block;
-        text-align: right;
-        width: calc(100% - 44px);
-        vertical-align: middle;
-    }
-    
-    .main-footer__link {
-        display: inline-block;
-        margin: 0 1rem;
-    }
 }
 
 .mobile-nav {
@@ -189,9 +166,13 @@ main {
     width: 90%;
     height: 100%;
     list-style: none;
-    margin: 10% auto;
+    margin: 0 auto;
     padding: 0;
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .mobile-nav__item {
@@ -233,3 +214,24 @@ main {
     display: block !important;
 }
 
+
+@media (min-width: 40rem) {
+    /*hide button on desktop view*/
+        .toggle-button {
+            display: none;
+        }
+    
+        .main-nav {
+            display: flex;
+        }
+        
+        .main-footer__link {
+            margin: 0 1rem;
+        }
+    
+        .main-footer__links {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    
