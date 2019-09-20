@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+:root{
+    --dark-green: #0e4f1f;
+    --highlight-color: #ff1b68;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,6 +14,9 @@
 html{
     height: 100%;
 }
+
+
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -32,12 +40,14 @@ main {
 .backdrop {
     position: fixed;
     display: none;
+    opacity: 0;
     top: 50;
     left: 0;
     z-index: 6;
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.5);
+    transition: 0.2s linear;
 }
 
 .main-header {
@@ -48,6 +58,12 @@ main {
     background: #2ddf5c;
     padding: 0.5rem 1rem;
     z-index: 6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    display: flex;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,7 +123,7 @@ main {
 .main-nav__item a,
 .mobile-nav__item a {
     text-decoration: none;
-    color: #0e4f1f;
+    color: var(--dark-green);
     font-weight: bold;
     padding: 0.2rem 0;
 }
@@ -118,10 +134,14 @@ main {
     border-bottom: 5px solid white;
 }
 
-.main-nav__item--cta a,
+.main-nav__item--cta {
+    animation: wiggle 400ms 3s 8 alternate;
+}
+
+.main-nav__item--cta a, /*cta=call to action*/
 .mobile-nav__item--cta a {
     color: white;
-    background: #ff1b68;
+    background: var(--highlight-color, #ff1b68);
     padding: 0.5rem 1rem;
     border-radius: 8px;
 }
@@ -130,7 +150,7 @@ main {
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
-    color: #ff1b68;
+    color: var(--highlight-color, #ff1b68);
     background: white;
     border: none;
 }
@@ -199,10 +219,10 @@ main {
   }
 
 .button {
-    background: #0e4f1f;
+    background: var(--dark-green, #0e4f1f);
     color: white;
     font: inherit;
-    border: 1.5px solid #0e4f1f;
+    border: 1.5px solid var(--dark-green, #0e4f1f);
     padding: 0.5rem;
     border-radius: 8px;
     font-weight: bold;
@@ -212,7 +232,7 @@ main {
 .button:hover,
 .button:active {
     background: white;
-    color: #0e4f1f;
+    color:var(--dark-green, #0e4f1f);
 }
 
 .button:focus {
@@ -227,6 +247,8 @@ main {
 }
 .open{
     display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 
@@ -250,3 +272,15 @@ main {
         }
     }
     
+/*animation control*/
+    @keyframes wiggle{
+        05{
+            transform: rotateZ(0deg);
+        }
+        50%{
+            transform: rotateZ(-10deg);
+        }
+        100%{
+            transform: rotateZ(10deg);
+        }
+    }
