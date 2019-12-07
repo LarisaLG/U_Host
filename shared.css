@@ -223,8 +223,9 @@ main {
     color: white;
     font: inherit;
     border: 1.5px solid var(--dark-green, #0e4f1f);
-    padding: 0.5rem;
-    border-radius: 8px;
+    padding: 1rem 0 2rem;
+    vertical-align: middle;   
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
 }
